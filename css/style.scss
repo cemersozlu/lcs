@@ -14,7 +14,6 @@ a{
 
 .header{
     height: 10vh;
-    // min-height:100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,7 +23,7 @@ a{
         position: relative;
         width: 100px;
         height: 100px;
-        top: 65px;
+        top: 5.2vh;
         z-index: 100;
     }
     .contact-links{
@@ -35,12 +34,8 @@ a{
         .contact-link{
             padding: 14px;
             font-size: 26px;
-            // color: #673ab7;
             text-decoration: none;
             transition: all 0.3s ease-in-out;
-            // &:hover{
-            //    color: #03a9f4;
-            // }
         }
     }
 }
@@ -59,16 +54,29 @@ a{
         background-position: center;
         background-size: cover;
     }
+    .carousel-indicators{
+        li{
+            background-color: lighten(#673ab7, 30%);
+        }
+        .active{
+            background-color: #673ab7;
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        color: #673ab7;
+        font-size: 26px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        filter: invert(100%);
+    }
 }
 .footer{
     height: 15vh;
-    // min-height:150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding:20px;
-    // text-align: center;
     .message{
         font-size: 18px;
         .contact-link{

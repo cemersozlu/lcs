@@ -36,7 +36,7 @@ a:hover {
   position: relative;
   width: 100px;
   height: 100px;
-  top: 65px;
+  top: 5.2vh;
   z-index: 100;
 }
 
@@ -81,6 +81,24 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.my-carousel .carousel-indicators li {
+  background-color: #bda7e3;
+}
+
+.my-carousel .carousel-indicators .active {
+  background-color: #673ab7;
+}
+
+.my-carousel .carousel-control-prev, .my-carousel .carousel-control-next {
+  color: #673ab7;
+  font-size: 26px;
+}
+
+.my-carousel .carousel-control-prev-icon, .my-carousel .carousel-control-next-icon {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .footer {
