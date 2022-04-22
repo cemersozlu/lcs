@@ -1,14 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+$accent: #673ab7;
 body{
     font-family: 'Poppins', sans-serif;
     background-color: white;
 }
 a{
-    color: #673ab7;
+    color: $accent;
     text-decoration: none;
     &:hover{
       color: #03a9f4;
       text-decoration: none;
+    }
+}
+
+.logo{
+    @media screen and (max-width: 768px){
+        top:30px;
+        left:30px;
+        width: 80px;
+        height: 80px;
+    }
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 120px;
+    left: 50px;
+    z-index: 100;
+}
+.bubble{
+    @media screen and (max-width: 768px){
+        top:unset;
+        left: unset;
+        bottom: 80px;
+        right: 50px;
+    }
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    background-color: $accent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:13px;
+    border-radius: 20px;
+    z-index: 100;
+    transform: rotate(-3deg);
+    // line-height: 35px;
+    .message{
+        // line-height: 2;
+        .contact-link{
+            width:35px;
+            height:35px;
+            display: inline-block;
+            border:1px solid rgba($color: #ffffff, $alpha: .4);
+            border-radius: 10px;
+            padding: 0 6px;
+            text-align: center;
+            // margin: 6px 0;
+            font-size: 22px;
+            line-height: 35px;
+        }
+    }
+    a{ color: white; }
+    &:after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 0;
+        border-color: $accent transparent transparent transparent;
+        position: absolute;
+        bottom: -18px;
+        left:20px;
     }
 }
 
@@ -39,8 +103,9 @@ a{
         }
     }
 }
+
 .my-carousel{
-    height: 75vh;
+    height: 100vh;
     min-height:400px;
     .carousel-inner{
         width: 100%;
@@ -51,44 +116,41 @@ a{
         width: 100%;
         background-color: white;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center top;
         background-size: cover;
     }
     .carousel-indicators{
         li{
-            background-color: lighten(#673ab7, 30%);
+            background-color: lighten($accent, 30%);
         }
         .active{
-            background-color: #673ab7;
+            background-color: $accent;
         }
     }
     .carousel-control-prev, .carousel-control-next{
-        color: #673ab7;
+        color: $accent;
         font-size: 26px;
     }
     .carousel-control-prev-icon, .carousel-control-next-icon{
         filter: invert(100%);
     }
 }
-.footer{
-    height: 15vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding:20px;
-    .message{
-        font-size: 18px;
-        .contact-link{
-            transition: all 0.3s ease-in-out;
-            padding:0 4px;
-        }
+// .footer{
+//     height: 15vh;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     padding:20px;
+//     .message{
+//         font-size: 18px;
+//         .contact-link{
+//             transition: all 0.3s ease-in-out;
+//             padding:0 4px;
+//         }
 
-    }
-}
-
-
-
+//     }
+// }
 
 // .product-card{
 //     .product-image{
